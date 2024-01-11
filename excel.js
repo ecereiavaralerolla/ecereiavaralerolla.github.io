@@ -346,21 +346,22 @@
                                 var rec_count = 0;
 
                                 var len = 0;
-                                if (lengthfield === 5) {
+                                if (lengthfield === 6) {
                                     for (var i = 1; i < result.split("[$@~!~@$]").length; i++) {
                                         if (result.split("[$@~!~@$]")[i].length > 0) {
 
                                             var rec = result.split("[$@~!~@$]")[i].split("[#@~!~@#]");
                                             if (rec.length > 0) {
-                                                len = rec[0].trim().length + rec[1].trim().length + rec[2].trim().length + rec[3].trim().length + rec[4].trim().length;
+                                                len = rec[0].trim().length + rec[1].trim().length + rec[2].trim().length + rec[3].trim().length + rec[4].trim().length + rec[5].trim().length;
                                                 if (len > 0) {
                                                     rec_count = rec_count + 1;
                                                     result_final.push({
                                                       'ID': rec[0].trim(),
-                                                      'Material': rec[1].trim(),
-                                                      'Vendor': rec[2].trim(),
-                                                      'ProdLocation': rec[3].trim(),
-                                                      'ProdDestination': rec[4].trim(),
+                                                      'Description': rec[1].trim(),
+                                                      'Material': rec[2].trim(),
+                                                      'Vendor': rec[3].trim(),
+                                                      'ProdLocation': rec[4].trim(),
+                                                      'ProdDestination': rec[5].trim(),
                                                     });
                                                 }
                                             }
