@@ -331,7 +331,7 @@
                                 if (sheetName === "Sheet1") {
                                     correctsheet = true;
                                     worksheet = workbook.Sheets[sheetName];
-                                    var number_of_columns = XLSX.utils.decode_range(sheet['!ref']).e.c +1;
+                                    var number_of_columns = XLSX.utils.decode_range(worksheet['!ref']).e.c +1;
                                     var csv = XLSX.utils.sheet_to_csv(worksheet);
                                     if (csv.length) {
                                         result.push(csv);
