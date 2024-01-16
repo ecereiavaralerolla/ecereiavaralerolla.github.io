@@ -370,7 +370,7 @@
                                                     dimensions_array.forEach((item,index) => {
                                                         obj[dimensions_array[index]] = rec[index].trim();
                                                     })
-                                                    result_final.push(obj);
+                                                    result_final.push(JSON.stringify(obj));
                                                 }
                                             }
                                         }
