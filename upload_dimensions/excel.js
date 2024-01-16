@@ -341,7 +341,6 @@
                             });
 
                             if (correctsheet) {
-                                Application.showMessage(ApplicationMessageType.Success,"Linea344");
                                 var lengthfield = result.split("[$@~!~@$]")[0].split("[#@~!~@#]").length;
                                 console.log("lengthfield: " + lengthfield);
 
